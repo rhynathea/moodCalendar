@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55DFC5C263F5AB700BEBAE7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DFC5B263F5AB700BEBAE7 /* Day.swift */; };
+		B55DFC5D263F5AB700BEBAE7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DFC5B263F5AB700BEBAE7 /* Day.swift */; };
+		B55DFC5E263F5AB700BEBAE7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DFC5B263F5AB700BEBAE7 /* Day.swift */; };
+		B55DFC60263F5CB400BEBAE7 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DFC5F263F5CB400BEBAE7 /* WeekView.swift */; };
+		B55DFC61263F5CB400BEBAE7 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DFC5F263F5CB400BEBAE7 /* WeekView.swift */; };
+		B55DFC62263F5CB400BEBAE7 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DFC5F263F5CB400BEBAE7 /* WeekView.swift */; };
 		B5689C76263624EE0052908F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689C75263624EE0052908F /* AppDelegate.swift */; };
 		B5689C78263624EE0052908F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689C77263624EE0052908F /* SceneDelegate.swift */; };
 		B5689C7A263624EE0052908F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689C79263624EE0052908F /* ContentView.swift */; };
@@ -15,6 +21,9 @@
 		B5689C82263624F00052908F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5689C80263624F00052908F /* LaunchScreen.storyboard */; };
 		B5689C8D263624F00052908F /* moodCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689C8C263624F00052908F /* moodCalendarTests.swift */; };
 		B5689C98263624F00052908F /* moodCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689C97263624F00052908F /* moodCalendarUITests.swift */; };
+		B5BDD08B26424498001F26E0 /* MoodSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BDD08A26424498001F26E0 /* MoodSelect.swift */; };
+		B5BDD08D264247C5001F26E0 /* WeekData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BDD08C264247C5001F26E0 /* WeekData.swift */; };
+		B5BDD08F26424D19001F26E0 /* ColorData.json in Resources */ = {isa = PBXBuildFile; fileRef = B5BDD08E26424D19001F26E0 /* ColorData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B55DFC5B263F5AB700BEBAE7 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		B55DFC5F263F5CB400BEBAE7 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		B5689C72263624EE0052908F /* moodCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5689C75263624EE0052908F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5689C77263624EE0052908F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,9 @@
 		B5689C93263624F00052908F /* moodCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moodCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5689C97263624F00052908F /* moodCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodCalendarUITests.swift; sourceTree = "<group>"; };
 		B5689C99263624F00052908F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5BDD08A26424498001F26E0 /* MoodSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelect.swift; sourceTree = "<group>"; };
+		B5BDD08C264247C5001F26E0 /* WeekData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekData.swift; sourceTree = "<group>"; };
+		B5BDD08E26424D19001F26E0 /* ColorData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ColorData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +113,13 @@
 		B5689C74263624EE0052908F /* moodCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				B5689C75263624EE0052908F /* AppDelegate.swift */,
-				B5689C77263624EE0052908F /* SceneDelegate.swift */,
-				B5689C79263624EE0052908F /* ContentView.swift */,
-				B5689C7B263624F00052908F /* Assets.xcassets */,
 				B5689C80263624F00052908F /* LaunchScreen.storyboard */,
 				B5689C83263624F00052908F /* Info.plist */,
+				B5689C75263624EE0052908F /* AppDelegate.swift */,
+				B5689C77263624EE0052908F /* SceneDelegate.swift */,
+				B5689C7B263624F00052908F /* Assets.xcassets */,
+				B5BDD08926423FB9001F26E0 /* Models */,
+				B5BDD08826423F9D001F26E0 /* Views */,
 				B5689C7D263624F00052908F /* Preview Content */,
 			);
 			path = moodCalendar;
@@ -134,6 +149,26 @@
 				B5689C99263624F00052908F /* Info.plist */,
 			);
 			path = moodCalendarUITests;
+			sourceTree = "<group>";
+		};
+		B5BDD08826423F9D001F26E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5689C79263624EE0052908F /* ContentView.swift */,
+				B55DFC5F263F5CB400BEBAE7 /* WeekView.swift */,
+				B5BDD08A26424498001F26E0 /* MoodSelect.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B5BDD08926423FB9001F26E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B55DFC5B263F5AB700BEBAE7 /* Day.swift */,
+				B5BDD08C264247C5001F26E0 /* WeekData.swift */,
+				B5BDD08E26424D19001F26E0 /* ColorData.json */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +277,7 @@
 				B5689C82263624F00052908F /* LaunchScreen.storyboard in Resources */,
 				B5689C7F263624F00052908F /* Preview Assets.xcassets in Resources */,
 				B5689C7C263624F00052908F /* Assets.xcassets in Resources */,
+				B5BDD08F26424D19001F26E0 /* ColorData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BDD08B26424498001F26E0 /* MoodSelect.swift in Sources */,
+				B55DFC60263F5CB400BEBAE7 /* WeekView.swift in Sources */,
 				B5689C76263624EE0052908F /* AppDelegate.swift in Sources */,
 				B5689C78263624EE0052908F /* SceneDelegate.swift in Sources */,
 				B5689C7A263624EE0052908F /* ContentView.swift in Sources */,
+				B55DFC5C263F5AB700BEBAE7 /* Day.swift in Sources */,
+				B5BDD08D264247C5001F26E0 /* WeekData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55DFC61263F5CB400BEBAE7 /* WeekView.swift in Sources */,
 				B5689C8D263624F00052908F /* moodCalendarTests.swift in Sources */,
+				B55DFC5D263F5AB700BEBAE7 /* Day.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55DFC62263F5CB400BEBAE7 /* WeekView.swift in Sources */,
 				B5689C98263624F00052908F /* moodCalendarUITests.swift in Sources */,
+				B55DFC5E263F5AB700BEBAE7 /* Day.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
