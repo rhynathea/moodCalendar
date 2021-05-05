@@ -7,16 +7,34 @@
 
 import SwiftUI
 
+extension Date {
+    var startOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let startDay = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 2, to: startDay)
+    }
+
+    var endOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+            guard let startDay = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+           return gregorian.date(byAdding: .day, value: 8, to: startDay)
+       }
+}
+
+let now = Date()
+let startWeek = now.startOfWeek!
+let endWeek = now.endOfWeek!
+
 
 struct WeekView: View {
-    
+
     var body: some View {
         
         VStack {
             
             Spacer()
             
-            Text("This is the week of")
+            Text("This is the week of \(startWeek.asString()) to \(endWeek.asString())")
             
             Spacer()
             // Days
