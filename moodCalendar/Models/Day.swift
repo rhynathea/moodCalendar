@@ -8,14 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Day {
-    private var color: Color
-    private var height: Int = 30
-    private var width: Int = 30
-    private var day: Int
-    
-    mutating func updateColor(c: Color) -> Void {
-        self.color = c
-    }
-    
+struct Day: Hashable, Codable {
+    var day: String
+    var color: Int
+    var weekday: Int
 }

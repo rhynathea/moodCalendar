@@ -13,12 +13,12 @@ extension Date {
         guard let startDay = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
         return gregorian.date(byAdding: .day, value: 2, to: startDay)
     }
-
+    
     var endOfWeek: Date? {
         let gregorian = Calendar(identifier: .gregorian)
-            guard let startDay = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
-           return gregorian.date(byAdding: .day, value: 8, to: startDay)
-       }
+        guard let startDay = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 8, to: startDay)
+    }
 }
 
 let now = Date()
@@ -27,7 +27,24 @@ let endWeek = now.endOfWeek!
 
 
 struct WeekView: View {
-
+    
+    func getColor(i: Int) -> Color {
+        switch i {
+        case 1:
+            return Color.blue
+        case 2:
+            return Color.purple
+        case 3:
+            return Color.yellow
+        case 4:
+            return Color.green
+        case 5:
+            return Color.red
+        default:
+            return Color.gray
+        }
+    }
+    
     var body: some View {
         
         VStack {
@@ -48,7 +65,7 @@ struct WeekView: View {
                         Text("Monday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[2]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[2].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 
@@ -59,7 +76,7 @@ struct WeekView: View {
                         Text("Tuesday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[3]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[3].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 
@@ -70,7 +87,7 @@ struct WeekView: View {
                         Text("Wednesday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[4]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[4].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 
@@ -81,7 +98,7 @@ struct WeekView: View {
                         Text("Thursday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[5]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[5].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 
@@ -92,7 +109,7 @@ struct WeekView: View {
                         Text("Friday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[6]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[6].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 
@@ -103,7 +120,7 @@ struct WeekView: View {
                         Text("Saturday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[7]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[7].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 
@@ -114,7 +131,7 @@ struct WeekView: View {
                         Text("Sunday")
                     }
                     Spacer()
-                    Rectangle().fill(colors[1]).frame(width: 50, height: 50)
+                    Rectangle().fill(getColor(i: days[1].color)).frame(width: 50, height: 50)
                     Spacer()
                 }.padding()
                 

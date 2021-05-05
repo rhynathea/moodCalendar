@@ -17,10 +17,31 @@ extension Date {
 
 struct MoodSelect: View {
     @State var mood:Color = Color.gray
+    @State var continuePressed: Int? = nil
     
     let date = Date()
     let weekday = Calendar.current.component(.weekday, from: Date())
     
+    func updateColor(c: Color) -> Void {
+        var i: Int = 0
+        
+        switch c {
+        case Color.blue:
+            i = 1
+        case Color.purple:
+            i = 2
+        case Color.yellow:
+            i = 3
+        case Color.green:
+            i = 4
+        case Color.red:
+            i = 5
+        default:
+            i = 0
+        }
+    
+        days[weekday].color = i
+    }
     
     var body: some View {
         NavigationView {
@@ -47,7 +68,6 @@ struct MoodSelect: View {
                         Button(action: {
                             mood = Color.blue
                             print("I'm feeling like a 1")
-                            colors[weekday] = mood
                         }, label: {
                             ZStack{
                                 Rectangle().fill(Color.blue).frame(width: 50, height:50)
@@ -60,7 +80,6 @@ struct MoodSelect: View {
                         Button(action: {
                             mood = Color.purple
                             print("I'm feeling like a 2")
-                            colors[weekday] = mood
                         }, label: {
                             ZStack{
                                 Rectangle().fill(Color.purple).frame(width: 50, height:50)
@@ -74,7 +93,6 @@ struct MoodSelect: View {
                         Button(action: {
                             mood = Color.yellow
                             print("I'm feeling like a 3")
-                            colors[weekday] = mood
                         }, label: {
                             ZStack{
                                 Rectangle().fill(Color.yellow).frame(width: 50, height:50)
@@ -88,7 +106,6 @@ struct MoodSelect: View {
                         Button(action: {
                             mood = Color.green
                             print("I'm feeling like a 4")
-                            colors[weekday] = mood
                         }, label: {
                             ZStack{
                                 Rectangle().fill(Color.green).frame(width: 50, height:50)
@@ -102,7 +119,6 @@ struct MoodSelect: View {
                         Button(action: {
                             mood = Color.pink
                             print("I'm feeling like a 5")
-                            colors[weekday] = mood
                         }, label: {
                             ZStack{
                                 Rectangle().fill(Color.pink).frame(width: 50, height:50)
@@ -123,8 +139,11 @@ struct MoodSelect: View {
 
                     Spacer()
                     
-                    NavigationLink(destination: WeekView()) {
-                        Text("Continue")
+                    NavigationLink(destination: WeekView(), tag: 1, selection: $continuePressed) {
+                        Button("Continue", action: {updateColor(c: mood)
+                            self.continuePressed = 1
+                            print("test")
+                        })
                     }
                     Spacer()
                 }
