@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-var days: [Day] = load("ColorData.json")
+var days: [Day] = DataManager.loadAll(Day.self)
 
 func load<T: Decodable> (_ filename: String) -> T {
     let data: Data
